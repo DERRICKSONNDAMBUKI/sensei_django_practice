@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sensei Django</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+
+<body>
+    <h1>Sensei Django</h1>
+
+    {% for person in people %}
+    <h1>user: {{person.name}}</h1>
+    <p>Age: {{person.age}}</p>
+    <p>Nationality: {{person.nationality}}</p>
+    {% endfor %}
+
+    <form action="/counter" method="POST">
+        {%csrf_token%}
+        <textarea name="words" cols="100" rows="30"></textarea>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
