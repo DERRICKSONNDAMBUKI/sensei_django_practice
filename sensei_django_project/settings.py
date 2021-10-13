@@ -87,7 +87,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'sensei_django_persondb',
         'USER': 'postgres',
-        'PASSWORD': '@S3ns31;',
+        'PASSWORD': 'your_pass',
         'HOST': '0.0.0.0',
     }
 }
