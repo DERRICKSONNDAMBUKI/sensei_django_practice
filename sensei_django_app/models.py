@@ -6,6 +6,6 @@ class Person(models.Model):
     age=models.IntegerField(default=0)
     nationality=models.CharField(max_length=50)
     
-    # def __str__(self):
-    #     return self.name
+    def __str__(self):
+        return self.name
     
